@@ -1,5 +1,5 @@
 <?php
-include('./db_config.php'); // Assurez-vous d'ajouter un point-virgule ici
+include('./db_config.php'); 
 
 // Requête pour récupérer les données des équipements
 $sql = "SELECT * FROM equipements";
@@ -12,41 +12,10 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Équipements</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #007BFF;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <a href="add_equipement.php">Ajouter un Nouvel Équipement</a>
     <h1>Liste des Équipements</h1>
     <table>
         <thead>
