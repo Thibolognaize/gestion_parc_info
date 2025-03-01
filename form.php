@@ -4,52 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un Équipement</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-        }
-        form div {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="./styles/form_style.css">
+    <</head>
 <body>
     <a href="index.php">Retour à la Liste des Équipements</a>
     <div class="container">
         <h2>Ajouter un Nouvel Équipement</h2>
-        <form action="ajouter_equipement.php" method="post">
+        <form action="./db/insert.php" method="post">
+            <div>
+                <label for="type_equipement">Type d'équipement</label>
+                <select id="type_equipement" name="type_equipement" required>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                </select>
+            </div>
             <div>
                 <label for="marque">Marque</label>
                 <input type="text" id="marque" name="marque" required>
